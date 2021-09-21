@@ -1,0 +1,164 @@
+<html>
+<head>
+  <title>My CSS practice page</title>
+
+  <!-- Importing styles from an external stylesheet -->
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="./fontawesome-free-5.15.4-web/css/all.min.css"
+
+  <!-- Style in the head -->
+  <!-- Also applied: Task 2.2: Override a style declaration via the default cascading hierarchy. This is overridden by the inline style. -->
+  <style>
+    .style3 {
+        background-color: purple;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home (broken link)</a></li>
+      <li><a href="page1.html">Page 1 (broken link)</a></li>
+      <li><a href="page2.html">Page 2 (broken link)</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <a class="floatleft" href="./csspage.html">
+       <img alt="Lenny Logo" src="Lenny_Logo.jpg"
+       width="225" height="225">
+    </a><br>
+    <H1>The Header</H1>
+  </header>
+
+  <main>
+
+  <h1>My CSS practice page</h1>
+
+    <!-- Style in the head (applied here) -->
+    <p class="style3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dolor eros, blandit vel lectus vel, rutrum feugiat dui. Suspendisse ornare, nisi et dapibus euismod, orci tellus vestibulum sem, ac consectetur nisi urna in risus. Phasellus sit amet blandit nulla. Sed sed ultrices turpis. Proin elit nisl, pharetra dignissim lacus vitae, pellentesque vestibulum mauris. Cras posuere maximus arcu at luctus. Sed elementum fringilla massa, sed vestibulum sem iaculis non.</p>
+
+    <p class="floatright">This paragraph floats to the right.</p>
+
+    <p>This paragraph does NOT clear the space, instead wrapping. <br>Proin rhoncus vel ipsum a sollicitudin. Suspendisse a orci venenatis, faucibus dui non, maximus velit. Ut tempor, ex et ornare aliquet, lectus quam fermentum purus, eu bibendum urna metus consectetur felis. Nullam pellentesque interdum tincidunt. Vivamus in semper dui. Nam vel tortor ipsum. Nullam non massa mauris.</p>
+
+    <p class= "floatleft">This paragraph floats to the left: <br>Pellentesque eu cursus dui, sit amet lacinia enim. Nunc blandit pretium arcu sit amet fringilla. Vestibulum cursus dui purus, ac pharetra nulla malesuada id. Etiam non tristique metus, et sodales nibh. Vestibulum ac dui ipsum. Nam nec nibh eros. Maecenas vehicula sagittis erat, eget lobortis sem. Quisque non tincidunt nunc. Aliquam non porta magna, eget fermentum erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi iaculis luctus neque, eu interdum est consequat vel. Maecenas euismod fermentum ante, cursus pulvinar risus lobortis ac. Sed eget molestie magna, at condimentum nulla. Nam luctus enim felis, ac tincidunt dolor semper vitae. Suspendisse viverra tincidunt convallis.</p>
+
+    <p class= "clear">This paragraph cleared the space: <br>Mauris id arcu mattis erat tristique lacinia. Mauris dui massa, volutpat sit amet porttitor non, sollicitudin eget nisl. Phasellus congue sem lectus, eu gravida orci blandit scelerisque. Donec dapibus dolor neque. Curabitur sagittis suscipit nunc, eget pulvinar libero pretium non. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam a faucibus magna. Vivamus at pharetra diam. Pellentesque ac odio ut dolor malesuada fermentum sollicitudin ac elit. Maecenas nec nisl convallis, mollis dolor non, auctor diam. Pellentesque commodo et nibh quis scelerisque. Mauris laoreet facilisis velit, vel fermentum justo semper posuere. Vivamus lorem ex, sodales sit amet luctus et, luctus vitae urna. Etiam id lobortis lorem. Mauris consectetur dui non ante consectetur consectetur.
+    </p>
+
+    <h2 id="special_H2_heading">This is an H2 header.</H2>
+
+<!-- Task 4.5: Float two items to the right, side by side (hint: assign a width to each of those elements),
+with any text after those elements NOT wrapping around them. Use the "clear" style to force those elements below the floating elements. -->
+    <h3 class="floatright">This Heading 3 floats to the right.</h3>
+    <h3 class="floatright">This Heading 3 floats to the right.</h3>
+
+    <p class="clear">Nulla fermentum quam id nisl iaculis porta pulvinar vitae massa. Praesent vitae tellus a sem semper interdum. Integer tristique libero arcu, congue venenatis leo auctor eget. Proin congue tincidunt laoreet. Maecenas egestas efficitur arcu, sit amet ultricies turpis placerat vel. Phasellus dui sapien, tempor et ligula a, accumsan efficitur purus. Etiam nec tortor ex. Vestibulum eu ipsum enim. Curabitur scelerisque dui sed ante molestie eleifend. Aenean faucibus nisl et urna tincidunt, a volutpat augue convallis. Donec in condimentum ante. Morbi feugiat at diam feugiat placerat. Aliquam volutpat augue sed consequat eleifend. Pellentesque tristique congue lorem vitae egestas. Nunc tempor consectetur sodales. Vivamus fermentum vestibulum eros, non iaculis mauris tempor in.</p>
+
+<!-- Topic 3: use a single selector instance to assign the same styles to multiple elements -->
+
+  <h2 class="H2class1">This is an H2 header.</H2>
+
+<!-- Topic 3: Style an element with a particular class -->
+    <p class="p-style">Maecenas vel ante ipsum. Nam suscipit lectus molestie, iaculis massa ac, vehicula dui. Aliquam scelerisque eros eget nunc efficitur, eget convallis mauris sodales. Aliquam eleifend, ex tristique imperdiet auctor, sapien neque vulputate mauris, id imperdiet sapien risus at lectus. Sed interdum felis vestibulum, viverra nulla non, faucibus elit. Etiam ornare, neque a eleifend tristique, ligula quam posuere nunc, non cursus sem lectus quis nulla. Donec a libero et nibh rhoncus vehicula. Nulla rhoncus sed ipsum eu tincidunt. Aenean et nisl a sapien consectetur molestie in eget odio. Donec faucibus ultricies nunc, id sollicitudin augue tempus in. Nulla consectetur tortor nec neque accumsan pulvinar. Integer sit amet condimentum lectus, eget scelerisque erat. Proin elementum efficitur justo, eu scelerisque metus. Fusce posuere congue felis in elementum. Fusce augue risus, tincidunt at convallis ullamcorper, commodo lacinia magna.</p>
+
+<!-- Topic 3: use a single selector instance to assign the same styles to multiple elements -->
+
+  <h2 class="H2class1">This is an H2 header.</H2>
+    <p>Maecenas vel ante ipsum. Nam suscipit lectus molestie, iaculis massa ac, vehicula dui. Aliquam scelerisque eros eget nunc efficitur, eget convallis mauris sodales. Aliquam eleifend, ex tristique imperdiet auctor, sapien neque vulputate mauris, id imperdiet sapien risus at lectus. Sed interdum felis vestibulum, viverra nulla non, faucibus elit. Etiam ornare, neque a eleifend tristique, ligula quam posuere nunc, non cursus sem lectus quis nulla. Donec a libero et nibh rhoncus vehicula. Nulla rhoncus sed ipsum eu tincidunt. Aenean et nisl a sapien consectetur molestie in eget odio. Donec faucibus ultricies nunc, id sollicitudin augue tempus in. Nulla consectetur tortor nec neque accumsan pulvinar. Integer sit amet condimentum lectus, eget scelerisque erat. Proin elementum efficitur justo, eu scelerisque metus. Fusce posuere congue felis in elementum. Fusce augue risus, tincidunt at convallis ullamcorper, commodo lacinia magna.</p>
+
+    <h2 class="H2class2">This is an H2 header.</H2>
+
+      <!-- In-line style for this paragraph below. -->
+      <!-- Also Task 2.2: Override a style declaration via the default cascading hierarchy. -->
+      <p class="style3" style="background-color:lightgray">Maecenas vel ante ipsum. Nam suscipit lectus molestie, iaculis massa ac, vehicula dui. Aliquam scelerisque eros eget nunc efficitur, eget convallis mauris sodales. Aliquam eleifend, ex tristique imperdiet auctor, sapien neque vulputate mauris, id imperdiet sapien risus at lectus. Sed interdum felis vestibulum, viverra nulla non, faucibus elit. Etiam ornare, neque a eleifend tristique, ligula quam posuere nunc, non cursus sem lectus quis nulla. Donec a libero et nibh rhoncus vehicula. Nulla rhoncus sed ipsum eu tincidunt. Aenean et nisl a sapien consectetur molestie in eget odio. Donec faucibus ultricies nunc, id sollicitudin augue tempus in. Nulla consectetur tortor nec neque accumsan pulvinar. Integer sit amet condimentum lectus, eget scelerisque erat. Proin elementum efficitur justo, eu scelerisque metus. Fusce posuere congue felis in elementum. Fusce augue risus, tincidunt at convallis ullamcorper, commodo lacinia magna.</p>
+
+    <ol>
+      <li>Number One</li>
+      <li>Number Two</li>
+      <li>Number Three</li>
+    </ol>
+
+<!-- Topic 3: Style an element that is a child of another element -->
+    <ul>
+      <li>Bullet One</li>
+      <li>Bullet Two</li>
+      <li><a href="https://www.Google.com">Google</a></li>
+    </ul>
+
+<!-- Topic 3: Style alternating rows of a table (assign a different background color to the alternating rows) -->
+    <table>
+      <caption>My dataset (caption)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Characteristic</th>
+          <th scope="col">Katie</th>
+          <th scope="col">Annie</th>
+          <th scope="col">Charlie</th>
+          </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Age</td>
+        <td>32</td>
+        <td>31</td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>Female</td>
+        <td>Female</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Marital Status</td>
+        <td>Married</td>
+        <td>Divorced</td>
+        <td>Single</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <!-- Topic 3: Style an element with three classes assigned to it -->
+    <p class="classa classb classc">Another paragraph of text.</p>
+
+    <!-- Topic 3: Style an image that has a particular alt text value (use the [attribute=value] pattern) */
+    Attribute styling - for example, alt text -->
+    <p><img src="./image of jesus.jpg" width="450" alt="Drawing of Jesus Christ"></p>
+
+    <!-- Topic 3: assign a style to all links that happen to lead to a pdf file (e.g. the link goes to some-document.pdf or some-other-document.pdf)
+    using a combination of the element selector plus attribute value selector: a[href$=".pdf"] -->
+    <p><a href="./fakelink.pdf">Fake PDF link for styling</a></p>
+
+<!-- Task 4.8: Add a background image to a <div>
+(hint: the div must have a height and width). Make sure the background image does NOT repeat within the div. -->
+    <div class="background_img">
+    </div>
+
+<!-- Task 4.9: Use Font Awesome https://fontawesome.com/ (Links to an external site.) to add some icon fonts to the page. -->
+    <span class="fas fa-3x fa-search"></span>
+    <span class="fas fa-3x fa-fire"></span>
+    <span class="fas fa-3x fa-cross"></span>
+
+    <div class="shadow">
+      <H4>Task 4.10: Add a drop shadow (box-shadow, not text-shadow) to at least one container (the container can be a div,
+      or one of the landmarks: header, nav, main, footer). The visual effect should have a grey shadow with a slight offset.</H4>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="footer">This is the footer.</p>
+    <p class="footer">No copyright information to share.<p>
+    <a class="footer" href="mailto:ltm22@georgetown.edu">Send Email</a>
+  </footer>
+
+</body>
+
+</html>

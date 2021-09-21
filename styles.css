@@ -1,0 +1,260 @@
+/* Styles by Leonard Marshall */
+
+/* Global Styles */
+
+/* Topic 3: style all elements, using * */
+
+/* Task 4.1: For the document as a whole, assign a default font that is sans-serif,
+and assign two other fallback sans-serif fonts to that same style declaration */
+
+/* Task 4.3: Set the default line height to be greater than the default. */
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.75;
+}
+
+.reveal .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}
+
+/* Element styles */
+
+
+/* Task 2.3: Override a style using the !important modifier */
+/* Topic 3: CSS Selectors: Element */
+h1 {
+  text-align: left !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  border-bottom: 1px solid grey;
+}
+
+/* Task 2.1: Override a style by declaring it again (but differently) */
+h2 {
+  border-bottom: 2px solid grey;
+}
+
+  /* Task 2.2: Override a style declaration via the default cascading hierarchy. This is overridden by the inline style. */
+p {
+  background-color: yellow;
+}
+
+/* Class styles */
+
+/* Topic 3: CSS Selectors: Class */
+.H2class1 {
+  background-color: purple;
+  color: yellow;
+}
+
+.H2class2 {
+  background-color: orange;
+  color: blue;
+  border-top: 4px solid red;
+  outline: 8px solid green;
+}
+
+
+/* Topic 3: Style an element with a particular class */
+p.p-style {
+  background-color: red;
+  color: white;
+}
+
+/* Topic 3: Style an element with three classes assigned to it */
+p.classa.classb.classc {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+/* ID styles */
+
+/* Topic 3: CSS Selectors: ID */
+#special_H2_heading {
+  background-color: black;
+  color: white;
+  padding-left: 5px;
+}
+
+
+/* Descendant styles */
+
+ol li {
+  font-family: Courier;
+}
+
+/* Parent-Child styles */
+
+/* Topic 3: Style an element that is a child of another element */
+ul > li {
+  font-family: "Comic Sans MS";
+}
+
+/* Topic 3: assign different visual looks for the following pseudo classes to all links
+(e.g. change the link color and apply a background color and outline for the hover/focus/active states): */
+
+/* Links */
+
+a:hover, a:focus {
+  color: green;
+  background-color: lightgray;
+  outline: 1px solid darkgray;
+}
+
+a:active {
+  color: red;
+}
+
+a:default {
+  color: brick;
+  outline: 2px solid blue;
+}
+
+header > a:hover {
+  background-color: none;
+}
+
+/* Topic 3: assign a style to all links that happen to lead to a pdf file (e.g. the link goes to some-document.pdf or some-other-document.pdf)
+using a combination of the element selector plus attribute value selector: a[href$=".pdf"] */
+
+/* Targeting link types with $= (ends with) */
+
+a[href$=".pdf"] {
+  background-color: orange;
+}
+
+/* Floats */
+
+.floatleft {
+  float: left;
+  width: 30%;
+}
+
+.floatright {
+  float: right;
+  width: 30%;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Styling table rows */
+
+/* Topic 3: Style alternating rows of a table (assign a different background color to the alternating rows) */
+
+tr:nth-child(odd) {
+  background-color: #eee;
+}
+
+tr:nth-child(even) {
+  background-color: darkgray;
+  color: white;
+}
+
+
+/* Topic 3: Style an image that has a particular alt text value (use the [attribute=value] pattern) */
+/* Attribute styling - for example, alt text*/
+
+[alt="Drawing of Jesus Christ"] {
+  width: 10%;
+}
+
+/* Task 4.2: Style an ordered list so that the links appear horizontal, as in a menu bar or navigation bar of a website.
+Task 4.2.1: Create a border around the navigation list as a whole (all of the navigation links must be inside that border) */
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 37%;
+}
+
+.navbar li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.navbar li:last-child {
+  float: left;
+  border-right: none;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #111;
+}
+
+header {
+  padding: 6px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+main {
+  background-color: #c9ffe5;
+  border: 1px solid black;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  border: 1px solid grey;
+}
+
+.footer {
+  background-color: none;
+}
+
+/* Task 4.8: Add a background image to a <div>
+(hint: the div must have a height and width). Make sure the background image does NOT repeat within the div. */
+
+.background_img {
+  background-image: url("./dog_with_bone.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 400px; /* You must set a specified height */
+  width: 800px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.shadow {
+  box-shadow: 4px 4px 4px #D3D3D3;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid black;
+  margin: 20px 10px;
+}
+
+/* Task 4.12: Create at least one instance of text that is appended to an element via CSS using ::before or ::after */
+
+main a::before {
+  content: "LINK:";
+}
