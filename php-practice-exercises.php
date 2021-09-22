@@ -266,6 +266,17 @@ echo $nl . '<p>' . $var210 . '</p>';
 2.13 Create a multi-dimensional array of 5 key/value pairs.
 */
 
+$array213 = [
+        'California' => 'Sacramento',
+        'Virginia' => 'Richmond',
+        'Maryland' => 'Annapolis',
+        'New York' => 'Albany',
+        'New Jersey' => 'Trenton'
+];
+
+echo $nl . '<p>Task 2.13</p>';
+echo '<pre>' . print_r($array213, true) . '</pre>';
+
 /*
 2.14 Use a built-in PHP function to sort this array by the keys, and use print_r() surrounded by <pre> tags on the array.
 */
@@ -278,7 +289,9 @@ echo $nl . '<p>' . $var210 . '</p>';
 2.15 Add another key/value pair to this array, then sort it again by the keys, and use print_r() surrounded by <pre> tags on the array.
 */
 
-
+$array213['Texas'] = 'Austin';
+echo $nl . '<p>Task 2.15</p>';
+echo '<pre>' . print_r($array213, true) . '</pre>';
 
 
 /*
@@ -290,10 +303,32 @@ TOPIC 3: CONDITIONAL LOGIC
 3.1 Write a simple if/else test to see if a variable contains any value, and echo the result to the web page.
 */
 
+$var31 = '';
+echo $nl . '<p>Task 3.1</p>';
+if ($var31) {
+  echo $nl . '<p>The variable has a value, which is: ' . $var31 . '</p>';
+} else {
+  echo $nl . '<p>The variable has no value</p>';
+}
+
 /*
 3.2 Write an if/else test with 4 possibilities. For example, if it is equal to x, y, or z (you can choose what values to test for), else default,
 and echo the result to the web page.
 */
+
+$var32 = 'Lenny';
+echo $nl . '<p>Task 3.2</p>';
+if ($var32 == 'Lenny') {
+  echo $nl . '<p>The variable has a value, which is: Lenny</p>';
+} elseif ($var32 == 'Charlie') {
+  echo $nl . '<p>The variable has a value, which is: Charlie</p>';
+} elseif ($var32 == 'Annie') {
+    echo $nl . '<p>The variable has a value, which is: Annie</p>';
+} elseif ($var32 == 'Katie'){
+  echo $nl . '<p>The variable has a value, which is: Katie</p>';
+} else {
+  echo $nl . '<p>The variable did not match any of our conditions.</p>';
+}
 
 /*
 3.3 Write a test for the exact same conditions as above, but use switch/case syntax, and echo the result to the web page.
@@ -303,9 +338,25 @@ and echo the result to the web page.
 3.4 Write an if/else test in which two conditions must both be true, and echo the result to the web page.
 */
 
+$var34 = 17;
+echo $nl . '<p>Task 3.4</p>';
+if ($var34 > 15 && $var34 < 25) {
+  echo $nl . '<p>The variable is greater than 15 and less than 25. The value is: ' . $var34 . '</p>';
+} else {
+  echo $nl . '<p>The variable is NOT greater than 15 and less than 25. The value is: ' . $var34 . '</p>';
+}
+
 /*
 3.5 Write an if/else test in which either one condition or the other must be true, and echo the result to the web page.
 */
+
+$var35 = 17;
+echo $nl . '<p>Task 3.5</p>';
+if ($var35 < 15 || $var35 > 25) {
+  echo $nl . '<p>The variable is less than 15 or greater than 25. The value is: ' . $var35 . '</p>';
+} else {
+  echo $nl . '<p>The variable is NOT less than 15 or greater than 25. The value is: ' . $var35 . '</p>';
+}
 
 /*
 3.6 Write an if/else test in which either two conditions must both be true or another condition must be true, and echo the result to the web page.
@@ -373,6 +424,13 @@ TOPIC 5: LOOPS
 5.3 Write a foreach() loop to do the same task as above.
 */
 
+//array-based... not the actual task...
+echo '<ul>';
+foreach($array213 as $key => $value) {
+  echo '<li>' . $key . ': ' . $value . '</li>';
+}
+echo '</ul>';
+
 /*
 5.4 Write a foreach() loop to echo the key/value pairs of a multidimensional array (you can use one of your multidimensional arrays above).
 */
@@ -396,6 +454,23 @@ TOPIC 6: FUNCTIONS
 plus the value to check for (2 parameters in total), and echo the result to the web page.
 You don't have to write new logic here. Just take the same logic as in 5.5. and wrap it in a function.
 */
+
+/* Basic structure/approach, but broken and not on task.
+//array-based... not the actual task...
+function arrayToUnorderedList($array) {
+  $output= '';
+  $output .= '<ul>';
+  foreach($array as $key => $value) {
+    $output .= '<li>' . $key . ': ' . $value . '</li>';
+  }
+  $output .= '</ul>';
+  return $output
+}
+*/
+
+//To call it...
+//arrayToUnorderedList($array213)
+
 
 /*
 6.7 Create another function that can check either the key or the value (the logic from 5.5. and 5.6 above). To call this function,
