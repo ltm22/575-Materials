@@ -47,6 +47,34 @@ class UI extends Base {
 		return $label . $start . $optionList . $end;
 	}
 
+	function simpleTable($caption, array $headers, array $data, $attributes = null) {
+
+		$tableCaption = "<table>\n<caption>$caption</caption>\n<tr>\n";
+
+		$tableHeaders = '<thead><tr>';
+		foreach($headers as $header) {
+			$tableHeaders .= "<th scope=\"col\">$header</th>\n";
+		}
+
+		$tableHeaders .= '</tr></thead>';
+
+		$tableRows ='<tbody>';
+		foreach($data as $k=>$v) {
+			$tableRows .= "<tr>\n";
+			foreach($v as $cell) {
+				$tableRows .= "<td>$cell</td>";
+			}
+			$tableRows .= "</tr>\n";
+		}
+		$tableRows .= '</tbody>';
+
+
+		$tableEnd = "</table>\n";
+
+		$output = $tableCaption . $tableHeaders . $tableRows . $tableEnd;
+		return $output;
+	}
+
 	function dialog() {
 
 	}
