@@ -59,8 +59,10 @@ class UI extends Base {
 		$tableHeaders .= '</tr></thead>';
 
 		$tableRows ='<tbody>';
+		$counter = 0;
 		foreach($data as $k=>$v) {
-			$tableRows .= "<tr>\n";
+			$tableRows .= "<tr id=\"idrow_$counter\">\n";
+			$counter++;
 			foreach($v as $cell) {
 				$tableRows .= "<td>$cell</td>";
 			}

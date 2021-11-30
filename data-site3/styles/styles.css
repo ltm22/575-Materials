@@ -77,7 +77,7 @@ nav a:focus {
 }
 
 nav a:first {
-	
+
 }
 
 main {
@@ -209,3 +209,8 @@ a.button:focus {
 	border: 1px solid #139936;
 	background-color: #fff3a2;
 }
+
+/* #dynamicContentWrapper:focus {
+	color: red;
+}
+*/
