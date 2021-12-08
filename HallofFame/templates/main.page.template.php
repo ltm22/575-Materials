@@ -1,7 +1,7 @@
 <?php
 /**
  * Define default file paths for the header, nav, footer,
- * but allow individual pages to override those file paths, 
+ * but allow individual pages to override those file paths,
  * so you can include a different header, nav, or footer
  * on a given page
  */
@@ -26,7 +26,8 @@ $page->footer 	= Base::renderExternalFile($footerPath);
 	<script src="https://kit.fontawesome.com/0169962cb8.js" crossorigin="anonymous"></script>
 	<script src="<?PHP echo URL_ROOT . 'javascript/jquery-3.6.0.min.js'; ?>" type="text/javascript"></script>
 	<script src="<?PHP echo URL_ROOT . 'javascript/deque-patterns.min.js'; ?>" type="text/javascript"></script>
-	
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+
 	<?php echo $page->cssFiles;?>
 	<?php echo $page->headStyles;?>
 </head>
@@ -35,19 +36,19 @@ $page->footer 	= Base::renderExternalFile($footerPath);
 
 <div id="container">
 
-<?php 
+<?php
 if ($page->header) {
 	echo "<header>\n<div class=\"innerContainer\">\n$page->header</div></header>\n";
 }?>
 
-<?php 
+<?php
 if ($page->nav) {
 	echo "<nav>\n<div class=\"innerContainer\">\n$page->nav</div></nav>\n";
 }?>
 
 <main>
 <div class="innerContainer">
-<?php 
+<?php
 if ($page->heading) {
 	echo "<h1>$page->heading</h1>\n";
 }?>
@@ -55,7 +56,7 @@ if ($page->heading) {
 </div>
 </main>
 
-<?php 
+<?php
 if ($page->footer) {
 	echo "<footer>\n<div class=\"innerContainer\">\n$page->footer</div></footer>\n";
 }?>

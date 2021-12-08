@@ -2,7 +2,7 @@
 
 // localhost
 if ( ($_SERVER['HTTP_HOST'] == 'localhost') || ($_SERVER['HTTP_HOST'] == '127.0.0.1') ) {
-	define("ROOT_PATH", '/Users/leonardmarshall/Georgetown_Coursework/575/575-Materials/data-site4/');
+	define("ROOT_PATH", '/Users/leonardmarshall/Georgetown_Coursework/575/575-Materials/HallofFame/');
 	define("PROTOCOL", 'http://');
 	define("DOMAIN", 'localhost/');
 	define('DB', array(
@@ -15,7 +15,7 @@ if ( ($_SERVER['HTTP_HOST'] == 'localhost') || ($_SERVER['HTTP_HOST'] == '127.0.
 
 } else {
 	// public server
-	define("ROOT_PATH", '/home/leonardm/public_html/575 Materials/data-site4');
+	define("ROOT_PATH", '/home/leonardm/public_html/575 Materials/HallofFame');
 	define("PROTOCOL", 'http://'); // change to https:// if necessary
 	define("DOMAIN", 'leonardmarshall.georgetown.domains/575 Materials/');
 	define('DB', array(
@@ -30,11 +30,17 @@ if ( ($_SERVER['HTTP_HOST'] == 'localhost') || ($_SERVER['HTTP_HOST'] == '127.0.
 define("ADMIN_EMAIL", 'ltm22@georgetown.edu');
 define("CLASS_PATH", ROOT_PATH . '/classes/');
 define("TEMPLATE_PATH", ROOT_PATH . '/templates/');
-define("SUBFOLDER", 'data-site4/');
+define("SUBFOLDER", 'HallofFame/');
 define("URL_ROOT", PROTOCOL . DOMAIN . SUBFOLDER);
 define ('TABLES', array(
 	'User' => 'users',
 	'Assignment' => 'assignments',
 	'Submission' => 'submissions',
-	'Course' => 'courses'
+	'Course' => 'courses',
+	'Balloting' => 'mostRecentBalloting',
+	'Pitching' => 'pitcherStats'
+	'Hitting' => 'hitterStats',
+	'Career' => 'performanceStats',
+	'Player' => 'players',
+	'Position' => 'primaryPosition'
 ));

@@ -26,6 +26,7 @@ ON `pp`.`id` = `b`.`position_id`';
 $ballotStats = $db->object('Balloting', $bSql);
 
 $tableRows = array();
+$positions = array();
 $counter = 0;
 
 	foreach ($ballotStats as $ballotStat) {
@@ -49,6 +50,10 @@ $counter = 0;
 		$tableRows[$counter][] = $ballotStat->votes;
 		$tableRows[$counter][] = $ballotStat->votePct;
 		$tableRows[$counter][] = $ballotStat->inducted;
+
+		// Table for vis.
+		$positions[$counter] = $ballotStat->position;
+
 		$counter++;
 	}
 
@@ -65,4 +70,88 @@ $ui = new UI(); // if the UI class has not been called yet;
 // $postEmail = $_POST['email'];
 
 $table = $ui->simpleTable($caption, $headers, $data, $attributes);
+echo '<H3>This page displays a table populated with the most recent (or final) results of the Hall of Fame Ballot for each player nominated between 2018 and 2020.</H3>';
+echo '<H4>Below the table, you may find a data visualization displaying the proportion of nominees by each position.</H4>';
 echo $table; // this would render a fully complete table
+echo '<H3>Pitchers are nominated moreso than any other position, but they do not claim the majority.</H3>';
+echo '<H3>Using just career statistics and advanced metrics to predict election results is difficult; oftentimes these decisions are political as well.</H3>';
+
+
+?>
+
+<div id= 'chart-container'></div>
+
+
+
+<script>
+
+var data = <?php echo json_encode($positions); ?>;
+console.log(data);
+
+var HiChartData = {};
+for (var position of data) {
+	console.log(position)
+	if (HiChartData[position]) {
+		HiChartData[position]++
+	}
+	else {
+		HiChartData[position] = 1;
+	}
+	console.log(HiChartData)
+}
+
+console.log(Object.keys(HiChartData))
+
+
+var totalNumberOfPlayers = data.length
+var positionsFinalData = []
+for (var position of Object.keys(HiChartData)) {
+	var percentage = HiChartData[position]/totalNumberOfPlayers
+	positionsFinalData.push({
+		name:position, y:percentage*100
+	})
+}
+console.log(positionsFinalData)
+
+
+Highcharts.chart('chart-container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Breakdown of Nominated Players to the MLB Hall of Fame by Position, 2018-2020'
+    },
+		subtitle: {
+        text: 'Source: baseballreference.com'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Percentage',
+        colorByPoint: true,
+        data: positionsFinalData
+    }
+	//
+]
+});
+
+</script>

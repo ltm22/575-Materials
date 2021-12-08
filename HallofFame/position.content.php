@@ -46,4 +46,5 @@ $ui = new UI(); // if the UI class has not been called yet;
 // $postEmail = $_POST['email'];
 
 $table = $ui->simpleTable($caption, $headers, $data, $attributes);
+echo '<H3>This page displays a reference table of all positions played in baseball.</H3>';
 echo $table; // this would render a fully complete table
